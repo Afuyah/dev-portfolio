@@ -1,0 +1,26 @@
+/* FloatingContactButton.css */
+.floating-contact-btn {
+    position: fixed;
+    bottom: 80px; /* Raise the button a little higher */
+    right: 20px;
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 20px; /* Increase padding for a larger button */
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    font-size: 1.5rem; /* Increase font size for better visibility */
+}
+
+.floating-contact-btn:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover for depth */
+}
+
+.floating-contact-btn:active {
+    transform: scale(0.95); /* Slightly decrease size when active */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Reduced shadow when active */
+}

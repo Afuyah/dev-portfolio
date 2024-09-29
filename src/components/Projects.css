@@ -1,0 +1,93 @@
+.projects {
+    max-width: 900px; /* Limit max width for better readability */
+    margin: 30px auto; /* Center the section */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.projects h2 {
+    text-align: center; /* Center align the title */
+    font-size: 2.5rem; /* Larger font for emphasis */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.projects-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.project-item {
+    background: white; /* White background for project items */
+    margin: 15px 0; /* Space between items */
+    padding: 15px; /* Padding for project item */
+    border-radius: 8px; /* Rounded edges */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.project-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.technologies {
+    margin-top: 10px; /* Space above technologies */
+    font-style: italic; /* Italicize technologies for emphasis */
+    color: #555; /* Gray color for technologies */
+}
+
+.project-link {
+    display: inline-block; /* Inline block for spacing */
+    margin-top: 10px; /* Space above link */
+    background-color: #007bff; /* Button background */
+    color: #fff; /* White text */
+    padding: 10px 15px; /* Padding for button */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded edges */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.project-link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.loading-spinner {
+    text-align: center; /* Center align loading spinner */
+    font-size: 1.5rem; /* Larger font for loading message */
+    color: #007bff; /* Color matching the theme */
+}
+
+.error-message {
+    color: red; /* Red color for error messages */
+    text-align: center; /* Center align error message */
+    margin: 20px 0; /* Space above and below */
+}
+
+/* Animation for fade-in effect */
+.fade-in {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Move down slightly */
+    animation: fadeIn 0.8s forwards; /* Animation to fade in */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .projects {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .projects h2 {
+        font-size: 2rem; /* Smaller title on small screens */
+    }
+}

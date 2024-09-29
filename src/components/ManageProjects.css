@@ -1,0 +1,61 @@
+/* ManageProjects.css */
+.manage-projects {
+    max-width: 600px; /* Limit width */
+    margin: 20px auto; /* Center the component */
+    padding: 20px; /* Padding for the container */
+    background-color: #f8f9fa; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.manage-projects h2 {
+    text-align: center; /* Center the title */
+    color: #007bff; /* Primary color */
+}
+
+.manage-projects form {
+    display: flex; /* Flex layout for form */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.manage-projects input {
+    margin-bottom: 10px; /* Space between inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ced4da; /* Border style */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.manage-projects button {
+    padding: 10px; /* Padding inside buttons */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color change */
+}
+
+.manage-projects button:hover {
+    background-color: #0056b3; /* Darken button on hover */
+}
+
+.manage-projects ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.manage-projects li {
+    display: flex; /* Flex layout for list items */
+    justify-content: space-between; /* Space out content */
+    align-items: center; /* Align items vertically */
+    margin: 10px 0; /* Space between list items */
+}
+
+.manage-projects li button {
+    margin-left: 10px; /* Space between buttons */
+    background-color: #dc3545; /* Danger color for delete */
+}
+
+.manage-projects li button:hover {
+    background-color: #c82333; /* Darker color on hover */
+}

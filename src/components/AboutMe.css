@@ -1,0 +1,106 @@
+.about-me {
+    max-width: 800px; /* Limit max width for better readability */
+    margin: 20px auto; /* Center the section */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: relative; /* For pseudo-elements positioning */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.about-me h2.title {
+    text-align: center; /* Center align the title */
+    font-size: 2.5rem; /* Larger font for emphasis */
+    margin-bottom: 20px; /* Space below title */
+    position: relative; /* For pseudo-element */
+}
+
+.about-me h2.title::after {
+    content: ''; /* Create a decorative line below the title */
+    display: block;
+    width: 50px; /* Line width */
+    height: 4px; /* Line thickness */
+    background-color: #007bff; /* Line color */
+    margin: 10px auto; /* Center the line */
+    border-radius: 2px; /* Rounded edges */
+}
+
+.bio {
+    margin-bottom: 30px; /* Space below the bio */
+}
+
+.fade-in {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Move down slightly */
+    animation: fadeIn 0.8s forwards; /* Animation to fade in */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+ul li {
+    background: rgba(0, 123, 255, 0.1); /* Light blue background */
+    padding: 10px; /* Padding for list items */
+    border-radius: 5px; /* Rounded edges */
+    margin: 10px 0; /* Space between items */
+    transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+ul li:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.resume-button {
+    display: inline-block; /* Inline block for spacing */
+    background-color: #007bff; /* Button background */
+    color: #fff; /* White text */
+    padding: 12px 20px; /* Padding for button */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded edges */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    margin: 20px auto; /* Center the button */
+}
+
+.resume-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+.contact-title {
+    margin-top: 30px; /* Space above contact title */
+    font-size: 1.8rem; /* Slightly smaller */
+    text-align: center; /* Center align */
+}
+
+.about-me p {
+    line-height: 1.6; /* Improved line height for readability */
+    color: #333; /* Dark text for contrast */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .about-me {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .about-me h2.title {
+        font-size: 2rem; /* Smaller title on small screens */
+    }
+
+    .resume-button {
+        width: 100%; /* Full width for the button on small screens */
+    }
+}

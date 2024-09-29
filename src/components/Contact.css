@@ -1,0 +1,90 @@
+
+
+body {
+    padding-top: 60px; /* Adjust to match your header height */
+}
+
+
+.contact-form {
+    max-width: 600px; /* Limit max width for better readability */
+    margin:  auto; /* Center the form */
+    padding: 40px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 200px;
+
+}
+
+.contact-form h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between fields */
+}
+
+.form-group label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Bold labels for emphasis */
+}
+
+input, textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded edges */
+    font-size: 16px; /* Font size for inputs */
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF; /* Blue border on focus */
+    outline: none; /* Remove outline */
+}
+
+.submit-button {
+    width: 100%; /* Full width for submit button */
+    padding: 10px; /* Padding for button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded edges */
+    background-color: #007BFF; /* Primary color */
+    color: white; /* White text */
+    font-size: 16px; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.response-message {
+    text-align: center; /* Center the response message */
+    margin-top: 15px; /* Space above */
+}
+
+.success {
+    color: green; /* Green for success messages */
+}
+
+.error {
+    color: red; /* Red for error messages */
+}
+
+.loading-spinner {
+    text-align: center; /* Center loading spinner */
+    margin-top: 15px; /* Space above */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-form h2 {
+        font-size: 1.8rem; /* Smaller title on small screens */
+    }
+}

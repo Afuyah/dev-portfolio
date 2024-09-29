@@ -1,0 +1,43 @@
+/* Dashboard.css */
+.dashboard {
+    max-width: 800px; /* Set a maximum width */
+    margin: 20px auto; /* Center the content */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.dashboard h2 {
+    text-align: center; /* Center the title */
+    color: #007bff; /* Primary color */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.dashboard ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-around; /* Space items evenly */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.dashboard li {
+    background-color: #ffffff; /* White background for links */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px 25px; /* Padding for links */
+    margin: 10px; /* Space between items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s; /* Smooth transform on hover */
+}
+
+.dashboard li:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.dashboard a {
+    text-decoration: none; /* Remove underline from links */
+    color: #343a40; /* Dark color for text */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center text inside links */
+}

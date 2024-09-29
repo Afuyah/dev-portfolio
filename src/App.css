@@ -1,0 +1,132 @@
+/* CSS Variables for easy theme management */
+:root {
+    --primary-color: #007bff; /* Primary button color */
+    --secondary-color: #2c3e50; /* Header/Footer color */
+    --light-bg: #e1e1e1; /* Light background */
+    --white-bg: #fff; /* White background for sections */
+    --text-color: #333; /* Main text color */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    margin-top: 240px; /* Adjust based on the actual height of your header */
+}
+
+
+
+.App {
+    font-family: 'Montserrat', sans-serif; 
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+header {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px var(--shadow-dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure header stays on top */
+}
+
+/* Content section */
+section {
+    padding: 20px;
+    margin: 10px 0; 
+    background: var(--white-bg); 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px var(--shadow-light);
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darken(var(--primary-color), 10%);
+    box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+}
+
+/* Navigation item hover effect */
+nav ul li:hover {
+    transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: var(--secondary-color);
+    color: #fff;
+    box-shadow: 0 -2px 5px var(--shadow-dark);
+}
+
+/* Floating contact button */
+.floating-contact-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 10px var(--shadow-light);
+    transition: transform 0.3s;
+}
+
+.floating-contact-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Loader Styles */
+.loader {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid var(--primary-color); 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    animation: spin 1s linear infinite; 
+    margin: 20px auto; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 10px 0;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%; /* Full width on small screens */
+        padding: 12px; /* Increased padding */
+    }
+}
