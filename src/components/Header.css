@@ -155,7 +155,7 @@
 }
 
 .nav.open {
-  max-height: 500px; /* Smooth drop-down effect */
+  max-height: 600px; /* Smooth drop-down effect */
 }
 
 /* Additional Styling for Responsiveness */
