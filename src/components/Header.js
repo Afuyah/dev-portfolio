@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false); // State to track menu visibility
+  const [scrolled, setScrolled] = useState(false); // State to track scroll position
 
   const toggleMenu = () => {
     setIsOpen(!isOpen); // Toggle the menu state
@@ -13,8 +14,22 @@ function Header() {
     setIsOpen(false); // Close the menu when a link is clicked
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-content">
         <h1 className="header-title">H. Afuya</h1>
         <div
