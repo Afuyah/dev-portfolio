@@ -38,28 +38,35 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  width: 30px;
-  height: 24px;
+  width: 35px;
+  height: 25px;
   transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 2000; /* Ensure it stays above the nav */
 }
 
 .bar {
   height: 3px;
   background-color: white;
-  border-radius: 2px;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  border-radius: 5px;
+  transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.3s ease;
 }
 
 .active:nth-child(1) {
-  transform: rotate(45deg) translate(7px, 7px);
+  transform: rotate(45deg) translate(5px, 5px); /* First bar turns into X */
 }
 
 .active:nth-child(2) {
-  opacity: 0;
+  opacity: 0; /* Hide the middle bar */
 }
 
 .active:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(6px, -6px); /* Third bar turns into X */
+}
+
+/* Improved Hamburger Animation */
+.hamburger:hover .bar {
+  background-color: #f0c14b; /* Color transition on hover */
 }
 
 /* Navigation Styling */
