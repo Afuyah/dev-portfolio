@@ -62,8 +62,9 @@ function App() {
         </Routes>
         <Footer />
 
-        <FloatingContactButton />
+      
       </div>
+  <FloatingContactButton />
     </Router>
   );
 }
