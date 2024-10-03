@@ -39,53 +39,55 @@ const Contact = () => {
     };
 
     return (
-        <form className="contact-form" onSubmit={handleSubmit}>
-            <h2>Contact Me</h2>
-            <div className="form-group">
-                <label htmlFor="name">Name:</label>
-                <input
-                    type="text"
-                    id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                    aria-required="true"
-                    aria-label="Your Name"
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="email">Email:</label>
-                <input
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    aria-required="true"
-                    aria-label="Your Email Address"
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="message">Message:</label>
-                <textarea
-                    id="message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    required
-                    aria-required="true"
-                    aria-label="Your Message"
-                ></textarea>
-            </div>
-            <button type="submit" disabled={loading} className="submit-button">
-                {loading ? 'Sending...' : 'Submit'}
-            </button>
-            {responseMessage && (
-                <p className={`response-message ${success ? 'success' : 'error'}`} aria-live="polite">
-                    {responseMessage}
-                </p>
-            )}
-            {loading && <div className="loading-spinner">Loading...</div>}
-        </form>
+        <div className="contact-container">
+            <form className="contact-form" onSubmit={handleSubmit}>
+                <h2>Contact Me</h2>
+                <div className="form-group">
+                    <label htmlFor="name">Name:</label>
+                    <input
+                        type="text"
+                        id="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                        aria-required="true"
+                        aria-label="Your Name"
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="email">Email:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        aria-required="true"
+                        aria-label="Your Email Address"
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="message">Message:</label>
+                    <textarea
+                        id="message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                        aria-required="true"
+                        aria-label="Your Message"
+                    ></textarea>
+                </div>
+                <button type="submit" disabled={loading} className="submit-button">
+                    {loading ? 'Sending...' : 'Submit'}
+                </button>
+                {responseMessage && (
+                    <p className={`response-message ${success ? 'success' : 'error'}`} aria-live="polite">
+                        {responseMessage}
+                    </p>
+                )}
+                {loading && <div className="loading-spinner">Loading...</div>}
+            </form>
+        </div>
     );
 };
 
