@@ -3,33 +3,23 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);  // State to track the menu visibility
-  const [scrolled, setScrolled] = useState(false);  // State to track if user has scrolled down
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Toggle the menu open/close state
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Close the menu after a link is clicked
   const closeMenu = () => {
     setIsOpen(false);
   };
 
-  // Scroll effect to change header style
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
-    // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
-
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
