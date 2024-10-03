@@ -1,90 +1,87 @@
+/* Contact.css */
 
-
-body {
-    padding-top: 60px; /* Adjust to match your header height */
+.contact-container {
+    max-width: 600px; /* Maximum width for the form */
+    margin: 50px auto; /* Center the form with top margin */
+    padding: 20px; /* Inner padding */
+    background-color: #fff; /* White background for form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-
+/* Form styles */
 .contact-form {
-    max-width: 600px; /* Limit max width for better readability */
-    margin:  auto; /* Center the form */
-    padding: 40px; /* Add padding for spacing */
-    background-color: #f9f9f9; /* Light background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    margin-bottom: 200px;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-form h2 {
-    text-align: center; /* Center the title */
-    margin-bottom: 20px; /* Space below title */
+    margin-bottom: 20px; /* Space below heading */
+    color: #333; /* Dark text color */
+    font-size: 1.5em; /* Heading size */
 }
 
 .form-group {
-    margin-bottom: 15px; /* Space between fields */
+    margin-bottom: 15px; /* Space between form fields */
 }
 
-.form-group label {
-    display: block; /* Make labels block elements */
-    margin-bottom: 5px; /* Space between label and input */
-    font-weight: bold; /* Bold labels for emphasis */
+label {
+    margin-bottom: 5px; /* Space below label */
+    font-weight: bold; /* Bold labels */
+    color: #555; /* Slightly lighter text */
 }
 
 input, textarea {
     width: 100%; /* Full width for inputs */
-    padding: 10px; /* Padding for inputs */
-    border: 1px solid #ccc; /* Border for inputs */
-    border-radius: 5px; /* Rounded edges */
-    font-size: 16px; /* Font size for inputs */
+    padding: 10px; /* Inner padding */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    transition: border 0.3s ease; /* Smooth border transition */
 }
 
 input:focus, textarea:focus {
-    border-color: #007BFF; /* Blue border on focus */
-    outline: none; /* Remove outline */
+    border-color: #00bcd4; /* Highlight color on focus */
+    outline: none; /* Remove default outline */
+}
+
+textarea {
+    height: 100px; /* Set a height for the textarea */
+    resize: none; /* Prevent resizing */
 }
 
 .submit-button {
-    width: 100%; /* Full width for submit button */
+    background-color: #00bcd4; /* Primary button color */
+    color: #fff; /* White text */
+    border: none; /* No border */
     padding: 10px; /* Padding for button */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded edges */
-    background-color: #007BFF; /* Primary color */
-    color: white; /* White text */
-    font-size: 16px; /* Font size for button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 1em; /* Button font size */
+    transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
 .submit-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #008c9e; /* Darker shade on hover */
 }
 
 .response-message {
-    text-align: center; /* Center the response message */
-    margin-top: 15px; /* Space above */
+    margin-top: 15px; /* Space above response message */
+    padding: 10px; /* Inner padding */
+    border-radius: 4px; /* Rounded corners */
 }
 
-.success {
-    color: green; /* Green for success messages */
+.response-message.success {
+    background-color: #d4edda; /* Light green for success */
+    color: #155724; /* Dark green text */
 }
 
-.error {
-    color: red; /* Red for error messages */
+.response-message.error {
+    background-color: #f8d7da; /* Light red for error */
+    color: #721c24; /* Dark red text */
 }
 
 .loading-spinner {
-    text-align: center; /* Center loading spinner */
-    margin-top: 15px; /* Space above */
-}
-
-/* Responsive Styles */
-@media (max-width: 600px) {
-    .contact-form {
-        padding: 15px; /* Adjust padding for smaller screens */
-    }
-
-    .contact-form h2 {
-        font-size: 1.8rem; /* Smaller title on small screens */
-    }
+    margin-top: 15px; /* Space above loading spinner */
+    font-size: 1em; /* Spinner font size */
+    color: #00bcd4; /* Spinner color */
 }
